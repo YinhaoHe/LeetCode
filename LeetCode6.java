@@ -13,7 +13,7 @@ class Solution {
             //循环size
             for (int j = 0; j + i < n; j += size) {
                 res.append(s.charAt(i + j));
-                if (i != 0 && i != numRows - 1 && j + size - 1 < n) {
+                if (i != 0 && i != numRows - 1 && j + size - i < n) {
                     res.append(s.charAt(j + size - i));
                 }
             }
