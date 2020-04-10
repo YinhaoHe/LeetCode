@@ -8,8 +8,8 @@ class Solution {
         
         int low = 0;
         int high = x;
-        while (low <= high) {
-            int partitionX = (low + high) / 2;
+        while (low <= high) { // X和Y的left要加起来等于x+y的一半 
+            int partitionX = (low + high) / 2; 
             int partitionY = (x + y + 1) / 2 - partitionX;
             
             //if partitionX is 0 it means nothing on left side then we use Integer.MIN_VALUE as maxLeftX
