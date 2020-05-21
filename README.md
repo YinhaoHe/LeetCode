@@ -1,13 +1,83 @@
 # java刷题常用代码数据结构以及坑
 
-## Hashmap:
+## Hashmap(traversal):
 
 ```java
 Hashmap<Integer,Integer> map=new HashMap<>()
 
+for(Map.Entry<Integer, String> entry: map.entrySet()) {
+  entry.getKey();
+  entry.getValue();
+}
+
+  Map<String, String> map = new HashMap<String, String>();    
+  map.put("key1", "value1");    
+  map.put("key2", "value2");    
+  map.put("key3", "value3");    
+      
+  //第一种：普遍使用，二次取值    
+  System.out.println("通过Map.keySet遍历key和value：");    
+  for (String key : map.keySet()) {    
+   System.out.println("key= "+ key + " and value= " + map.get(key));    
+  }    
+      
+  //第二种    
+  System.out.println("通过Map.entrySet使用iterator遍历key和value：");    
+  Iterator<Map.Entry<String, String>> it = map.entrySet().iterator();    
+  while (it.hasNext()) {    
+   Map.Entry<String, String> entry = it.next();    
+   System.out.println("key= " + entry.getKey() + " and value= " + entry.getValue());    
+  }    
+      
+ //第三种：推荐，尤其是容量大时</span>    
+  System.out.println("通过Map.entrySet遍历key和value");    
+  for (Map.Entry<String, String> entry : map.entrySet()) {    
+   System.out.println("key= " + entry.getKey() + " and value= " + entry.getValue());    
+  }    
+    
+  //第四种    
+  System.out.println("通过Map.values()遍历所有的value，但不能遍历key");    
+  for (String v : map.values()) {    
+   System.out.println("value= " + v);    
+  }
+
+
 
 ```
+## HashMap Get key according to Value
+
+```java
+// Approach1
+public static Object getKey(Map map, Object value){
+    List<Object> keyList = new ArrayList<>();
+    for(Object key: map.keySet()){
+        if(map.get(key).equals(value)){
+            keyList.add(key);
+        }
+    }
+    return keyList;
+}
+
+// Approach2
+public static Object getKey(Map map, Object value){
+    Set set = map.entrySet(); //通过entrySet()方法把map中的每个键值对变成对应成Set集合中的一个对象
+    Iterator<Map.Entry<Object, Object>> iterator = set.iterator();
+    ArrayList<Object> arrayList = new ArrayList();
+    while(iterator.hasNext()){
+        //Map.Entry是一种类型，指向map中的一个键值对组成的对象
+        Map.Entry<Object, Object> entry = iterator.next();
+        if(entry.getValue().equals(value)){
+            arrayList.add(entry.getKey());
+        }
+    }
+    return arrayList;
+}
+```
+
+
+
 ## HashSet:
+
 set.add():
 Return Value: The function returns True if the element is not present in the HashSet otherwise False if the element is already present in the HashSet.
 
@@ -166,16 +236,16 @@ Space: O(n)
 
 ## BinaryTree:
 
-### Inorder Traversal:
+## Inorder Traversal:
 
 左->root->右
 
 
-### Preorder Traversal:
+## Preorder Traversal:
 
 root->左->右
 
-### Postorder Traversal:
+## Postorder Traversal:
 
 左->右->root
 
@@ -190,9 +260,9 @@ A XOR A = 0
 
 ## 常识：
 
-### 闰年规则：
+## 闰年规则：
 
-### IP地址规则：
+## IP地址规则：
 
 for a segment:
 
@@ -201,7 +271,7 @@ for a segment:
 
 e.g. "010010" should not be interpreted as 01,00,1,0
 
-# 打代码时候必须注意的坑：
+## 打代码时候必须注意的坑：
 
 1. 注意区分array中的index和value，别用混
 2. 注意Integer和String这种Object比较时候用 .intValue() .equals()
@@ -213,30 +283,33 @@ e.g. "010010" should not be interpreted as 01,00,1,0
 8. BFS DFS 注意成环问题,必要时用visited[]
 9. StringBuilder 使用的时候记得每一层都用一个new
 
-### Lambda expression
+## Lambda expression
 
 (a, b) -> a - b 
 
 accept a and b, then return a-b
 
-### CompareTo
+## CompareTo
 
 Use ASCII to compare, bigger return possitive number, smaller return negetive number, equal return 0. 
 
-### sort
+## sort
 
 (a, b) -> a[0] - b[0]	sort from small to big
 
 (a, b) -> b[0] - a[0]	sort from big to small
 
-### for
+## for
 
-1. public static void main(String args[]) {
-2. ​		int[] integers = { 1, 2, 3, 4, 5 };
-3. ​		for (int i : integers) {
-4. ​			System.out.println(i);
-5. ​		}
-6. ​	}
+```java
+
+
+public static void main(String args[]) {
+		int[] integers = { 1, 2, 3, 4, 5 };
+		for (int i : integers) {
+			System.out.println(i);
+		}
+	}
 
 
 
@@ -258,14 +331,14 @@ public static void main(String args[]) {
 			Object str = itr2.next();
 			System.out.println(str);
 		}
+}
+```
 
-	}
-
-### valueOf()
+## valueOf()
 
 删除头尾空字符 返回对应的结果
 
-### Arrays.asList();
+## Arrays.asList();
 
 将数组转换成列表 可以直接System.out.println(list);
 
@@ -273,7 +346,7 @@ public static void main(String args[]) {
 
 list可以直接打印
 
-### String
+## String
 
 String.charAt();
 
@@ -281,12 +354,6 @@ String.length();
 
 str.remove('a','b') 把str中的a都换成b
 
-### List
+## List
 
 List.size();
-
-
-
-
-
-![](./art/coding.gif)
