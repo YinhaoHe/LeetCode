@@ -1,4 +1,4 @@
-# java刷题常用代码数据结构以及坑
+# java tips
 
 ## Hashmap(traversal):
 
@@ -228,10 +228,28 @@ Space: O(n)
 
 **注意，quicksort这种partition的方法会打乱原来的relative order的顺序**
 
+## String/StringBuilder:
+
+String.charAt();
+
+String.length();
+
+str.remove('a','b') 把str中的a都换成b
+
+### split("分隔符的选择");
+
+除撇号外，所有非字母数字的Java字符串拆分
+
 ```java
+// 用除英文字符以外的所有符号 分割
+words= Str.split("\\W+");
+words = Str.split("[^\\w']+");
+// 非特殊英文字符
+words = Str.split("[^a-zA-Z0-9']+");
+// 特殊英文字符 fiancée
+words = Str.split("[^\\p{L}0-9']+");
 
 ```
-## String/StringBuilder:
 
 
 ## BinaryTree:
@@ -345,14 +363,6 @@ public static void main(String args[]) {
 也可以list.get(1) list.remove(0) list.add(在末尾添加) 等等
 
 list可以直接打印
-
-## String
-
-String.charAt();
-
-String.length();
-
-str.remove('a','b') 把str中的a都换成b
 
 ## List
 
