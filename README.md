@@ -352,6 +352,28 @@ public static void main(String args[]) {
 }
 ```
 
+## Iterator()
+
+不管内部数据类型
+
+```java
+import java.util.*;
+public class Muster {
+ 
+    public static void main(String[] args) {
+        ArrayList list = new ArrayList();
+        list.add("a");
+        list.add("b");
+        list.add("c");
+        Iterator it = list.iterator();
+        while(it.hasNext()){
+            String str = (String) it.next();
+            System.out.println(str);
+        }
+    }
+}
+```
+
 ## valueOf()
 
 删除头尾空字符 返回对应的结果
