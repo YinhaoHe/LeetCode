@@ -389,3 +389,22 @@ list可以直接打印
 ## List
 
 List.size();
+
+## NPM & Yarn
+
+```reStructuredText
+npm install === yarn 
+npm install taco --save === yarn add taco
+npm uninstall taco --save === yarn remove taco
+npm install taco --save-dev === yarn add taco --dev
+npm update --save === yarn upgrade
+```
+
+```
+npm i === yarn
+npm i taco === yarn add taco
+npm un taco === yarn remove taco
+npm i -D taco === yarn add taco --dev
+npm up === yarn upgrade
+```
+
