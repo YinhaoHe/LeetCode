@@ -390,7 +390,7 @@ list可以直接打印
 
 List.size();
 
-## NPM & Yarn
+## npm & yarn
 
 ```reStructuredText
 npm install === yarn 
