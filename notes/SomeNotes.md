@@ -68,3 +68,13 @@ str.remove('a','b') 把str中的a都换成b
 ### List
 
 List.size();
+
+### Python string index
+
+H E L L O
+
+0 1 2 3 4
+
+0 -4 -3 -2 -1
+
+-1 Always stands for the last character in the string.
