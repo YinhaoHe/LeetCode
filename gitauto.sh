@@ -18,6 +18,7 @@ msg=$1
 if [ -n "$msg" ]; then
    git add -A
    git commit -m"${msg}"
+   green "enter password to pull"
    git pull
    green "add, commit, pull finished, enter password to push"
    git push origin master
