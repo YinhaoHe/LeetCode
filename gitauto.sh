@@ -1,12 +1,31 @@
-echo -e "\033[32m[git auto start...]\033[0m"
+## green to echo 
+function green(){
+    echo -e "\033[32m[ $1 ]\033[0m"
+}
+
+## Error
+function bred(){
+    echo -e "\033[31m\033[01m[ $1 ]\033[0m"
+}
+
+## warning
+function byellow(){
+    echo -e "\033[33m\033[01m[ $1 ]\033[0m"
+}
+
+green "git auto start..."
 msg=$1
 if [ -n "$msg" ]; then
    git add -A
    git commit -m"${msg}"
    git pull
-   echo -e "\033[32m[add, commit, pull finished, enter password to push]\033[0m"
+   green "add, commit, pull finished, enter password to push"
    git push origin master
-   echo -e "\033[32m[git auto successfully finished!]\033[0m"
+   green "git auto successfully finished!"
 else
-   echo -e "\033[31m\033[01m\033[05m[Please add commit message e.g. (bash gitauto.sh \"commit message\")]\033[0m" 
+   bred "Please add commit message e.g. (bash gitauto.sh \"commit message\")"
 fi
+
+
+
+
