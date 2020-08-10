@@ -8,5 +8,5 @@ if [ -n "$msg" ]; then
    git push origin master
    echo "git auto successfully finished!"
 else
-   echo "Please add commit message e.g. (bash gitauto.sh message)"
+   echo "Please add commit message e.g. (bash gitauto.sh message)" 
 fi
