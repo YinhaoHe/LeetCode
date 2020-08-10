@@ -4,13 +4,8 @@ function green(){
 }
 
 ## Error
-function bred(){
+function red(){
     echo -e "\033[31m\033[01m[ $1 ]\033[0m"
-}
-
-## warning
-function byellow(){
-    echo -e "\033[33m\033[01m[ $1 ]\033[0m"
 }
 
 green "git auto start..."
@@ -24,7 +19,7 @@ if [ -n "$msg" ]; then
    git push origin master
    green "git auto successfully finished!"
 else
-   bred "Please add commit message e.g. (bash gitauto.sh \"commit message\")"
+   red "Please add commit message e.g. (bash gitauto.sh \"commit message\")"
 fi
 
 
