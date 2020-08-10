@@ -1,15 +1,10 @@
-#! /bin/bash
-
-echo "git auto push start..."
-msg=$1 # $1 is the first parameter
+msg=$1
 if [ -n "$msg" ]; then
-	git add -A
-	git commit -m"${msg}"
-	git pull
-	git status
-	echo "Finish add, commit, pull; don't forget to push"
+   git add -A
+   git commit -m"${msg}"
+   git pull
+   git status
+   echo "完成add、commit、pull，别忘了push"
 else
-	echo "Please enter commit message"
-	
-echo "git auto push end..."
+    echo "请添加注释再来一遍"
 fi
