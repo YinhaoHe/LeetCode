@@ -4,17 +4,25 @@
 
 ### 1192 Critical connection
 
-[My solution 1](../Amazon/1192_critical_connection.java)
+#### My solutions
 
-[My solution 2](../Amazon/1192_tarjan_dfs_critical_connection.java)
+- [My solution 1](../Amazon/1192_critical_connection.java)
 
-[blog](https://leetcode.jp/leetcode-1192-critical-connections-in-a-network-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF%E5%88%86%E6%9E%90/)
+- [**My solution 2 best!**](../Amazon/1192_tarjan_dfs_critical_connection.java)
 
-[YouTube solution1](https://www.youtube.com/watch?v=kYcUIEQqL2Y)
+- [My solution 3](../Amazon/1192_critical_connection_solution3.java)
 
-[YouTube solution2](https://www.youtube.com/watch?v=mKUsbABiwBI)
+#### Online solutions
 
-[Tarjan algorithm](https://www.cnblogs.com/nullzx/p/7968110.html)
+- [blog **best solution**](https://leetcode.jp/leetcode-1192-critical-connections-in-a-network-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF%E5%88%86%E6%9E%90/)
+
+- [YouTube solution1](https://www.youtube.com/watch?v=kYcUIEQqL2Y)
+
+- [YouTube solution2](https://www.youtube.com/watch?v=mKUsbABiwBI)
+
+- [Tarjan algorithm](https://www.cnblogs.com/nullzx/p/7968110.html)
+
+#### Steps
 
 - 用临接表 adjancy list
   - List<Integer>[] graph
