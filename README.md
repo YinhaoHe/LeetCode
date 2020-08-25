@@ -1,5 +1,7 @@
 # java tips
 
+## [LeetCode questions](./notes/LeetCode_questions.md)
+
 ## Hashmap(traversal):
 
 ```java
