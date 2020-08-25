@@ -10,7 +10,7 @@
 
 - [**My solution 2 best!**](../Amazon/1192_tarjan_dfs_critical_connection.java)
 
-- [My solution 3](../Amazon/1192_critical_connection_solution3.java)
+- [My solution 3 **My idea**](../Amazon/1192_critical_connection_solution3.java)
 
 #### Online solutions
 
