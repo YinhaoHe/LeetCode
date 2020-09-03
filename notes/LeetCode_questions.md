@@ -91,3 +91,9 @@
 - 把这个cost重新加入pq 当作一个新的stick
 - 维护一个minCost 变量 每次 minCost += cost
 - 返回minCost就是答案
+
+### 733 Flood Fill
+
+#### [My solution](../Amazon/733_dfs_FloodFill.java)
+
+- 纯 dfs
