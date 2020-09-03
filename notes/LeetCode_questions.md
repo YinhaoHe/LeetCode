@@ -65,7 +65,19 @@
 #### My solutions
 
 - [sorting](../Amazon/973_sorting_KClosestPointsToOrigin.java)
-- 
+  - 计算所有点到原点距离
+  - 排序
+  - 根据排序找到前k个点
+
+- [max Heap](../Amazon/973_maxHeap_KClosestPointsToOrigin.java) ([优先队列](https://www.liaoxuefeng.com/wiki/1252599548343744/1265120632401152))
+  - 求距离最近的k个值
+  - 建立一个k + 1 大小的heap 然后按照距离倒序排列 形成一个max heap
+  - 每次遇到一个点就放入heap 如果大于k了就弹出一个 也就是弹出距离最远的 最后剩下的就是距离最近的k个点
+
+#### Online solutions
+
+- [max Heap 1](http://www.noteanddata.com/leetcode-973-K-Closest-Points-to-Origin-java-solution-note.html)
+- [max Heap 2](https://www.cnblogs.com/Dylan-Java-NYC/p/10556223.html)
 
 
 
