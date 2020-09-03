@@ -43,3 +43,20 @@
 
 ![1192. Critical Connections in a Network](./imgs/1192. Critical Connections in a Network.png)
 
+## 2020.09.02
+
+### 957 Prison Cells After N Days 找规律
+
+感觉没啥意义
+
+#### [My solution](../Amazon/957_findPattern_prisonCellsAfterNDays.java) 
+
+- 记录下每一步的state 
+- 找到规律 例如：经过多少天就会形成 repetitive state
+- 用给定step N mod C (我们找到的规律)
+- N 对 C 取余数后找到对应state就是答案
+
+#### Online solution
+
+- [简单写法](https://massivealgorithms.blogspot.com/2019/01/leetcode-957-prison-cells-after-n-days.html)
+
