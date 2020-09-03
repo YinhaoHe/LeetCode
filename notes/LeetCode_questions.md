@@ -58,5 +58,7 @@
 
 #### Online solution
 
-- [简单写法](https://massivealgorithms.blogspot.com/2019/01/leetcode-957-prison-cells-after-n-days.html)
+- [解法大全](https://massivealgorithms.blogspot.com/2019/01/leetcode-957-prison-cells-after-n-days.html)
+
+
 
