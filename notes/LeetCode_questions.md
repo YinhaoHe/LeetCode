@@ -60,7 +60,7 @@
 
 - [解法大全](https://massivealgorithms.blogspot.com/2019/01/leetcode-957-prison-cells-after-n-days.html)
 
-### 973 K Closest Points to Origin 
+### 973 K Closest Points to Origin
 
 #### My solutions
 
@@ -79,5 +79,15 @@
 - [max Heap 1](http://www.noteanddata.com/leetcode-973-K-Closest-Points-to-Origin-java-solution-note.html)
 - [max Heap 2](https://www.cnblogs.com/Dylan-Java-NYC/p/10556223.html)
 
+## 2020.09.03
 
+### 1167 Minimum Cost to Connect Sticks (最小堆 默认优先队列即可)
 
+#### [My solution](../Amazon/1167_minHeap_minimumCostToConnectSticks.java)
+
+- 建立一个优先队列
+- stick全放进去
+- 当pq.size() > 1 就连续弹出两个 加起来得到一个临时cost
+- 把这个cost重新加入pq 当作一个新的stick
+- 维护一个minCost 变量 每次 minCost += cost
+- 返回minCost就是答案
