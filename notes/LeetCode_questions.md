@@ -97,3 +97,10 @@
 #### [My solution](../Amazon/733_dfs_FloodFill.java)
 
 - 纯 dfs
+
+### 572 Subtree of Another Tree
+
+#### [My solution](../Amazon/572_preOrderTree_SubtreeOfAnotherTree.java)
+
+- 把每一个node作为一个root
+- 比较当前的subtree
