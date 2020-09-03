@@ -60,5 +60,12 @@
 
 - [解法大全](https://massivealgorithms.blogspot.com/2019/01/leetcode-957-prison-cells-after-n-days.html)
 
+### 973 K Closest Points to Origin 
+
+#### My solutions
+
+- [sorting](../Amazon/973_sorting_KClosestPointsToOrigin.java)
+- 
+
 
 
