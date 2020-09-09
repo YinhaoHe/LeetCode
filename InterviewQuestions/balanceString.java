@@ -70,3 +70,42 @@ public class Solution2 {
         
 //         int left = s[0];
 //         int right = s[length - 1]
+
+import java.util.*;
+
+public class Solution {
+    public int solution(String S) {
+        for (int k = 1; k <= S.length(); k++) {
+            for (int i = 0; i < S.length() - k + 1; i++) {
+                // two set to store upper and lower case letters
+                Set<Character> lower = new HashSet<>();
+                Set<Character> upper = new HashSet<>();
+                String tmp = S.substring(i, i + k);
+                char[] tempCharArr = tmp.toCharArray();
+                for (char ch : tempCharArr) {
+                    if (Character.isLowerCase(ch))
+                        lower.add(ch);
+                    else
+                        upper.add(ch);
+                }
+                if (contains(lower, upper)) {
+                    return tmp.length();
+                }
+            }
+        }
+        return -1;
+    }
+
+    static public boolean contains(Set<Character> first, Set<Character> second) {
+        Set<Character> lower1 = new HashSet<>();
+        Set<Character> lower2 = new HashSet<>();
+        first.forEach((element) -> {
+            lower1.add(Character.toLowerCase(element));
+        });
+        second.forEach((element) -> {
+            lower2.add(Character.toLowerCase(element));
+        });
+        
+        return lower1.containsAll(lower2) && lower1.size() == lower2.size();
+    }
+}
