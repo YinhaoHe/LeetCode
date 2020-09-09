@@ -80,7 +80,7 @@ public static Object getKey(Map map, Object value){
 
 ## HashSet:
 
-set.add():
+set.add(): 
 Return Value: The function returns True if the element is not present in the HashSet otherwise False if the element is already present in the HashSet.
 
 ## Treemap:
