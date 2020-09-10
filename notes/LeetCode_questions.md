@@ -104,3 +104,17 @@
 
 - 把每一个node作为一个root
 - 比较当前的subtree
+
+## 2020.09.10
+
+### 1152 Analyze User Website Visit Pattern ( 多个哈希表 暴力循环做法)
+
+#### [Online solution](https://www.cnblogs.com/slowbirdoflsh/p/11349461.html)
+
+- [TreeMap](https://www.jianshu.com/p/e11fe1760a3d)
+
+#### [My solution](../Amazon/1152_threeHashMap_AnalyzeUserWebsiteVisitPattern.java)
+
+- ```HashMap<username, TreeMap<timestamp, website>> ```根据用户名```username``` 组合时间戳```timestamp``` 和 所访问的网页名```website``` 使用```TreeMap```结构 使得```website```按```timestamp```顺序存储
+- ```HashMap<username, ArrayList<website>>```(根据用户名```username``` 提取按时间戳```timestamp```排序的网页名```website``` 用于进行组合访问路径
+- ```HashMap<website_path, count>```根据访问路径 记录访问路径出现的次数
