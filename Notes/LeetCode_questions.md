@@ -123,7 +123,7 @@
 
 ### 50 Pow(x, n)
 
-#### [My solution](../Amazon/50_recursion_logN_pow(x, n).java)
+#### 
 
 [力扣](https://leetcode-cn.com/problems/powx-n/solution/50-powx-n-java-san-xing-dai-ma-san-ge-yao-dian-di-/)
 
