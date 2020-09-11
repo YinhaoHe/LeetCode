@@ -118,3 +118,18 @@
 - ```HashMap<username, TreeMap<timestamp, website>> ```根据用户名```username``` 组合时间戳```timestamp``` 和 所访问的网页名```website``` 使用```TreeMap```结构 使得```website```按```timestamp```顺序存储
 - ```HashMap<username, ArrayList<website>>```(根据用户名```username``` 提取按时间戳```timestamp```排序的网页名```website``` 用于进行组合访问路径
 - ```HashMap<website_path, count>```根据访问路径 记录访问路径出现的次数
+
+## 2020.09.11
+
+### 50 Pow(x, n)
+
+#### [My solution](../Amazon/50_recursion_logN_pow(x, n).java)
+
+[力扣](https://leetcode-cn.com/problems/powx-n/solution/50-powx-n-java-san-xing-dai-ma-san-ge-yao-dian-di-/)
+
+- 不断尝试将指数对半分求解，直到0时返回1
+- 如果遇到指数不为偶数时则要额外乘上底数
+- 最后不要忘了考虑指数为负号的情况，要给底数取个倒数
+
+#### [Online solution](https://leetcode.jp/leetcode-50-powx-n-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF%E5%88%86%E6%9E%90/)
+
