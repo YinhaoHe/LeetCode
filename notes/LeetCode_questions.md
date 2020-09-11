@@ -6,7 +6,7 @@
 
 #### My solutions
 
-- [My solution 1](../Amazon/1192_critical_connection.java)
+- [My solution 1](../amazon/1192_critical_connection.java)
 
 - [**My solution 2 best!**](../Amazon/1192_tarjan_dfs_critical_connection.java)
 
