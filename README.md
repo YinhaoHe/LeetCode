@@ -1,6 +1,6 @@
 # java tips
 
-## [LeetCode questions](./notes/LeetCode_questions.md)
+## [LeetCode questions](./Notes/LeetCode_questions.md)
 
 ## Hashmap(traversal):
 
