@@ -133,3 +133,13 @@
 
 #### [Online solution](https://leetcode.jp/leetcode-50-powx-n-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF%E5%88%86%E6%9E%90/)
 
+## 2020.09.14
+
+### 451 Sort Characters By Frequency
+
+[My solution](../Amazon/451_string_HashMap_comparatorOverwrite_sortCharacterByFrequency.java)
+
+- 建立一个哈希表存储 并且 count 每个字符有多少个
+- 建立一个 List 存储并且重写一个 comparator 实现从大到小排列
+- 使用 StringBuilder 创建一个结果字符串
+- return 的时候不要忘记 sb.toString()
