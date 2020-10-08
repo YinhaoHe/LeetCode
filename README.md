@@ -1,6 +1,250 @@
-# java tips
+# [LeetCode questions](./Notes/LeetCode_questions.md)
 
-## [LeetCode questions](./Notes/LeetCode_questions.md)
+# Java tips
+
+## String/StringBuilder:
+
+- String.charAt();
+
+- String.length();
+
+- str.remove('a','b') 把str中的a都换成b
+
+### split("分隔符的选择");
+
+除撇号外，所有非字母数字的Java字符串拆分
+
+```java
+// 用除英文字符以外的所有符号 分割
+words= Str.split("\\W+");
+words = Str.split("[^\\w']+");
+// 非特殊英文字符
+words = Str.split("[^a-zA-Z0-9']+");
+// 特殊英文字符 fiancée
+words = Str.split("[^\\p{L}0-9']+");
+
+```
+
+### Java 数组转字符串 字符串转数组
+
+#### 字符串转数组
+
+使用Java split() 方法
+
+split() 方法根据匹配给定的正则表达式来拆分字符串。
+
+**注意：** . 、 | 和 * 等转义字符，必须得加 \\。多个分隔符，可以用 | 作为连字符。
+
+```java
+// 字符串转数组  java.lang.String
+String str = "0,1,2,3,4,5";
+String[] arr = str.split(","); // 用,分割
+System.out.println(Arrays.toString(arr)); // [0, 1, 2, 3, 4, 5]
+```
+
+#### 数组转字符串
+
+- 方法一: 遍历
+
+```java
+String[] arr = { "0", "1", "2", "3", "4", "5" };
+// 遍历
+StringBuffer str5 = new StringBuffer();
+for (String s : arr) {
+    str5.append(s);
+}
+System.out.println(str5.toString()); // 012345
+```
+
+- 方法二: 使用StringUtils的join方法
+
+```java
+//数组转字符串 org.apache.commons.lang3.StringUtils
+String str3 = StringUtils.join(arr); // 数组转字符串,其实使用的也是遍历
+System.out.println(str3); // 012345
+String str4 = StringUtils.join(arr, ","); // 数组转字符串(逗号分隔)(推荐)
+System.out.println(str4); // 0,1,2,3,4,5
+```
+
+- 方法三: 使用ArrayUtils的toString方法
+
+```java
+// 数组转字符串 org.apache.commons.lang3.ArrayUtils
+String str2 = ArrayUtils.toString(arr, ","); // 数组转字符串(逗号分隔,首尾加大括号)
+System.out.println(str2); // {0,1,2,3,4,5}
+```
+
+## Lambda expression
+
+(a, b) -> a - b 
+
+accept a and b, then return a-b
+
+## CompareTo
+
+Use ASCII to compare, bigger return possitive number, smaller return negetive number, equal return 0. 
+
+## sort
+
+(a, b) -> a[0] - b[0]	sort from small to big
+
+(a, b) -> b[0] - a[0]	sort from big to small
+
+## for
+
+```java
+
+public static void main(String args[]) {
+		int[] integers = { 1, 2, 3, 4, 5 };
+		for (int i : integers) {
+			System.out.println(i);
+		}
+	}
+
+
+
+public static void main(String args[]) {
+		String[] strings = { "小马", "小刘", "小张", "小王" };
+		Collection stringList = java.util.Arrays.asList(strings);
+		for (Object i : stringList) {
+			System.out.println(i);
+		}
+	}
+
+
+
+public static void main(String args[]) {
+		String[] strings = { "小马", "小刘", "小张", "小王" };
+		Collection stringList = java.util.Arrays.asList(strings);
+		Iterator itr2 = stringList.iterator();
+		while (itr2.hasNext()) {
+			Object str = itr2.next();
+			System.out.println(str);
+		}
+}
+```
+
+## Iterator()
+
+不管内部数据类型
+
+```java
+import java.util.*;
+public class Muster {
+ 
+    public static void main(String[] args) {
+        ArrayList list = new ArrayList();
+        list.add("a");
+        list.add("b");
+        list.add("c");
+        Iterator it = list.iterator();
+        while(it.hasNext()){
+            String str = (String) it.next();
+            System.out.println(str);
+        }
+    }
+}
+```
+
+## valueOf()
+
+删除头尾空字符 返回对应的结果
+
+## Arrays.asList();
+
+将数组转换成列表 可以直接System.out.println(list);
+
+也可以list.get(1) list.remove(0) list.add(在末尾添加) 等等
+
+list可以直接打印
+
+## List
+
+List.size();
+
+## npm & yarn
+
+```reStructuredText
+npm install === yarn 
+npm install taco --save === yarn add taco
+npm uninstall taco --save === yarn remove taco
+npm install taco --save-dev === yarn add taco --dev
+npm update --save === yarn upgrade
+```
+
+```
+npm i === yarn
+npm i taco === yarn add taco
+npm un taco === yarn remove taco
+npm i -D taco === yarn add taco --dev
+npm up === yarn upgrade
+```
+
+## Java generics 
+
+Java 定义一个泛型类
+
+```java
+public class Box<T> {
+   
+  private T t;
+ 
+  public void add(T t) {
+    this.t = t;
+  }
+ 
+  public T get() {
+    return t;
+  }
+ 
+  public static void main(String[] args) {
+    Box<Integer> integerBox = new Box<Integer>();
+    Box<String> stringBox = new Box<String>();
+ 
+    integerBox.add(new Integer(10));
+    stringBox.add(new String("菜鸟教程"));
+ 
+    System.out.printf("整型值为 :%d\n\n", integerBox.get());
+    System.out.printf("字符串为 :%s\n", stringBox.get());
+  }
+}
+```
+
+Java 使用泛型方法
+
+```java
+public class GenericMethodTest
+{
+   // 泛型方法 printArray                         
+   public static < E > void printArray( E[] inputArray )
+   {
+      // 输出数组元素            
+         for ( E element : inputArray ){        
+            System.out.printf( "%s ", element );
+         }
+         System.out.println();
+    }
+ 
+    public static void main( String args[] )
+    {
+        // 创建不同类型数组： Integer, Double 和 Character
+        Integer[] intArray = { 1, 2, 3, 4, 5 };
+        Double[] doubleArray = { 1.1, 2.2, 3.3, 4.4 };
+        Character[] charArray = { 'H', 'E', 'L', 'L', 'O' };
+ 
+        System.out.println( "整型数组元素为:" );
+        printArray( intArray  ); // 传递一个整型数组
+ 
+        System.out.println( "\n双精度型数组元素为:" );
+        printArray( doubleArray ); // 传递一个双精度型数组
+ 
+        System.out.println( "\n字符型数组元素为:" );
+        printArray( charArray ); // 传递一个字符型数组
+    } 
+}
+```
+
+# DS
 
 ## Hashmap(traversal):
 
@@ -230,42 +474,19 @@ Space: O(n)
 
 **注意，quicksort这种partition的方法会打乱原来的relative order的顺序**
 
-## String/StringBuilder:
-
-String.charAt();
-
-String.length();
-
-str.remove('a','b') 把str中的a都换成b
-
-### split("分隔符的选择");
-
-除撇号外，所有非字母数字的Java字符串拆分
-
-```java
-// 用除英文字符以外的所有符号 分割
-words= Str.split("\\W+");
-words = Str.split("[^\\w']+");
-// 非特殊英文字符
-words = Str.split("[^a-zA-Z0-9']+");
-// 特殊英文字符 fiancée
-words = Str.split("[^\\p{L}0-9']+");
-
-```
-
 
 ## BinaryTree:
 
-## Inorder Traversal:
+### Inorder Traversal:
 
 左->root->右
 
 
-## Preorder Traversal:
+### Preorder Traversal:
 
 root->左->右
 
-## Postorder Traversal:
+### Postorder Traversal:
 
 左->右->root
 
@@ -302,175 +523,3 @@ e.g. "010010" should not be interpreted as 01,00,1,0
 7. Buy stock 问题是不用考虑底边长的，跟储水问题不一样
 8. BFS DFS 注意成环问题,必要时用visited[]
 9. StringBuilder 使用的时候记得每一层都用一个new
-
-## Lambda expression
-
-(a, b) -> a - b 
-
-accept a and b, then return a-b
-
-## CompareTo
-
-Use ASCII to compare, bigger return possitive number, smaller return negetive number, equal return 0. 
-
-## sort
-
-(a, b) -> a[0] - b[0]	sort from small to big
-
-(a, b) -> b[0] - a[0]	sort from big to small
-
-## for
-
-```java
-
-
-public static void main(String args[]) {
-		int[] integers = { 1, 2, 3, 4, 5 };
-		for (int i : integers) {
-			System.out.println(i);
-		}
-	}
-
-
-
-public static void main(String args[]) {
-		String[] strings = { "小马", "小刘", "小张", "小王" };
-		Collection stringList = java.util.Arrays.asList(strings);
-		for (Object i : stringList) {
-			System.out.println(i);
-		}
-	}
-
-
-
-public static void main(String args[]) {
-		String[] strings = { "小马", "小刘", "小张", "小王" };
-		Collection stringList = java.util.Arrays.asList(strings);
-		Iterator itr2 = stringList.iterator();
-		while (itr2.hasNext()) {
-			Object str = itr2.next();
-			System.out.println(str);
-		}
-}
-```
-
-## Iterator()
-
-不管内部数据类型
-
-```java
-import java.util.*;
-public class Muster {
- 
-    public static void main(String[] args) {
-        ArrayList list = new ArrayList();
-        list.add("a");
-        list.add("b");
-        list.add("c");
-        Iterator it = list.iterator();
-        while(it.hasNext()){
-            String str = (String) it.next();
-            System.out.println(str);
-        }
-    }
-}
-```
-
-## valueOf()
-
-删除头尾空字符 返回对应的结果
-
-## Arrays.asList();
-
-将数组转换成列表 可以直接System.out.println(list);
-
-也可以list.get(1) list.remove(0) list.add(在末尾添加) 等等
-
-list可以直接打印
-
-## List
-
-List.size();
-
-## npm & yarn
-
-```reStructuredText
-npm install === yarn 
-npm install taco --save === yarn add taco
-npm uninstall taco --save === yarn remove taco
-npm install taco --save-dev === yarn add taco --dev
-npm update --save === yarn upgrade
-```
-
-```
-npm i === yarn
-npm i taco === yarn add taco
-npm un taco === yarn remove taco
-npm i -D taco === yarn add taco --dev
-npm up === yarn upgrade
-```
-
-## Java generics 
-
-Java 定义一个泛型类
-
-```java
-public class Box<T> {
-   
-  private T t;
- 
-  public void add(T t) {
-    this.t = t;
-  }
- 
-  public T get() {
-    return t;
-  }
- 
-  public static void main(String[] args) {
-    Box<Integer> integerBox = new Box<Integer>();
-    Box<String> stringBox = new Box<String>();
- 
-    integerBox.add(new Integer(10));
-    stringBox.add(new String("菜鸟教程"));
- 
-    System.out.printf("整型值为 :%d\n\n", integerBox.get());
-    System.out.printf("字符串为 :%s\n", stringBox.get());
-  }
-}
-```
-
-Java 使用泛型方法
-
-```java
-public class GenericMethodTest
-{
-   // 泛型方法 printArray                         
-   public static < E > void printArray( E[] inputArray )
-   {
-      // 输出数组元素            
-         for ( E element : inputArray ){        
-            System.out.printf( "%s ", element );
-         }
-         System.out.println();
-    }
- 
-    public static void main( String args[] )
-    {
-        // 创建不同类型数组： Integer, Double 和 Character
-        Integer[] intArray = { 1, 2, 3, 4, 5 };
-        Double[] doubleArray = { 1.1, 2.2, 3.3, 4.4 };
-        Character[] charArray = { 'H', 'E', 'L', 'L', 'O' };
- 
-        System.out.println( "整型数组元素为:" );
-        printArray( intArray  ); // 传递一个整型数组
- 
-        System.out.println( "\n双精度型数组元素为:" );
-        printArray( doubleArray ); // 传递一个双精度型数组
- 
-        System.out.println( "\n字符型数组元素为:" );
-        printArray( charArray ); // 传递一个字符型数组
-    } 
-}
-```
-
