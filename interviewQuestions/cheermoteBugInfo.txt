@@ -1,0 +1,175 @@
+
+
+
+
+
+--------------------------------------------------
+Yinhao He running tests on 84 lines of Java...
+
+Yinhao He finished running tests:
+
+Failed:
+  Args: [1, ["cheer"], "roo100 big1000"]
+  Result: 
+  Expected result: ["NO_CHEERS"]
+Console: 
+java.lang.reflect.InvocationTargetException
+    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+    at Main.callSolutionMethodWith(Main.java:121)
+    at Main.main(Main.java:34)
+Caused by: java.lang.NumberFormatException: For input string: ""
+    at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+    at java.base/java.lang.Integer.parseInt(Integer.java:662)
+    at java.base/java.lang.Integer.parseInt(Integer.java:770)
+    at Solution.solution(Solution.java:45)
+    ... 6 more
+
+
+Failed:
+  Args: [1, ["cheer"], "this is just a normal message and also cheer100 cheer100"]
+  Result: 
+  Expected result: ["cheer200"]
+Console: 
+java.lang.reflect.InvocationTargetException
+    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+    at Main.callSolutionMethodWith(Main.java:121)
+    at Main.main(Main.java:34)
+Caused by: java.lang.NumberFormatException: For input string: "111111111111"
+    at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+    at java.base/java.lang.Integer.parseInt(Integer.java:652)
+    at java.base/java.lang.Integer.parseInt(Integer.java:770)
+    at Solution.solution(Solution.java:45)
+    ... 6 more
+
+
+Passed:
+  Args: [1, ["cheer"], "this is just a normal message,look at me"]
+  Result: ["NO_CHEERS"]
+
+Failed:
+  Args: [1, ["cheer", "party", "rainbow"], "cheer1 cheer2, cheer4, party100 cheer1"]
+  Result: ["party1111111111", "cheer11111115"]
+  Expected result: ["party100", "cheer8"]
+
+Failed:
+  Args: [1, ["cheer", "party"], "cheer1 cheer2, cheer4,party100 cheer1"]
+  Result: ["party1111111111", "cheer11111115"]
+  Expected result: ["party100", "cheer8"]
+
+Failed:
+  Args: [1, ["cheer"], "cheer10000 cheer10000 cheer10000 cheer10000 cheer10000 cheer10000 cheer10000 cheer10000 cheer10000 cheer10000 cheer1, cheer4"]
+  Result: 
+  Expected result: ["cheer4"]
+Console: 
+java.lang.reflect.InvocationTargetException
+    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+    at Main.callSolutionMethodWith(Main.java:121)
+    at Main.main(Main.java:34)
+Caused by: java.lang.NumberFormatException: For input string: "111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"
+    at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+    at java.base/java.lang.Integer.parseInt(Integer.java:652)
+    at java.base/java.lang.Integer.parseInt(Integer.java:770)
+    at Solution.solution(Solution.java:45)
+    ... 6 more
+
+
+Failed:
+  Args: [1, ["cheer"], "cheer10000 cheer10000 cheer10000 cheer10000 cheer10000 cheer10000 cheer10000 cheer10000 cheer10000 cheer10000, cheer4"]
+  Result: 
+  Expected result: ["cheer100004"]
+Console: 
+java.lang.reflect.InvocationTargetException
+    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+    at Main.callSolutionMethodWith(Main.java:121)
+    at Main.main(Main.java:34)
+Caused by: java.lang.NumberFormatException: For input string: "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"
+    at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+    at java.base/java.lang.Integer.parseInt(Integer.java:652)
+    at java.base/java.lang.Integer.parseInt(Integer.java:770)
+    at Solution.solution(Solution.java:45)
+    ... 6 more
+
+
+Failed:
+  Args: [1, ["cheer"], "cheer1 cheer10001, cheer4"]
+  Result: 
+  Expected result: ["cheer4"]
+Console: 
+java.lang.reflect.InvocationTargetException
+    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+    at Main.callSolutionMethodWith(Main.java:121)
+    at Main.main(Main.java:34)
+Caused by: java.lang.NumberFormatException: For input string: "111111111111"
+    at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+    at java.base/java.lang.Integer.parseInt(Integer.java:652)
+    at java.base/java.lang.Integer.parseInt(Integer.java:770)
+    at Solution.solution(Solution.java:45)
+    ... 6 more
+
+
+Failed:
+  Args: [1, ["cheer"], "cheer1 cheer10000, cheer4"]
+  Result: 
+  Expected result: ["cheer10005"]
+Console: 
+java.lang.reflect.InvocationTargetException
+    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+    at Main.callSolutionMethodWith(Main.java:121)
+    at Main.main(Main.java:34)
+Caused by: java.lang.NumberFormatException: For input string: "111111111111"
+    at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+    at java.base/java.lang.Integer.parseInt(Integer.java:652)
+    at java.base/java.lang.Integer.parseInt(Integer.java:770)
+    at Solution.solution(Solution.java:45)
+    ... 6 more
+
+
+Failed:
+  Args: [3, ["cheer"], "cheer1 cheer2,cheer4"]
+  Result: ["cheer11111115"]
+  Expected result: ["cheer4"]
+
+Failed:
+  Args: [1, ["party"], "cheer1"]
+  Result: 
+  Expected result: ["NO_CHEERS"]
+Console: 
+java.lang.reflect.InvocationTargetException
+    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+    at Main.callSolutionMethodWith(Main.java:121)
+    at Main.main(Main.java:34)
+Caused by: java.lang.NumberFormatException: For input string: ""
+    at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+    at java.base/java.lang.Integer.parseInt(Integer.java:662)
+    at java.base/java.lang.Integer.parseInt(Integer.java:770)
+    at Solution.solution(Solution.java:45)
+    ... 6 more
+
+
+Failed:
+  Args: [1, ["cheer"], "cheer1 cheer2,cheer4"]
+  Result: ["cheer11111115"]
+  Expected result: ["cheer7"]
+
+Summary: 1 tests passed, 11 tests failed.
