@@ -2,7 +2,7 @@ class Solution {
     public int strStr(String haystack, String needle) {
         int lh = haystack.length(), ln = needle.length();
         if (ln == 0) return 0;
-        
+         
         // two pointers ph pn; 
         int ph = 0;
         
