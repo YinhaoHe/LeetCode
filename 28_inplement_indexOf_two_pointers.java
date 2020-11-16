@@ -3,7 +3,7 @@ class Solution {
         int lh = haystack.length(), ln = needle.length();
         if (ln == 0) return 0;
         
-        int ph = 0;
+        int ph = 0; 
         
         while (ph < lh - ln + 1) {
             // find the first position of ph
