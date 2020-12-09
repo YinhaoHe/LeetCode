@@ -4,6 +4,8 @@ class Solution {
 
 	public String solution(String S) {
 
+		if (S == null || S.length() == 0) return "";
+
 		char[] digits = {'1', '2', '3'};
 		char[] s = S.toCharArray();
 
