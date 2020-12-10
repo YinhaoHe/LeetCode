@@ -7,7 +7,7 @@ class Solution {
 		if (S == null || S.length() == 0) return "";
 
 		char[] digits = {'1', '2', '3'};
-		char[] s = S.toCharArray();
+		char[] s = S.toCharArray(); 
 
 		int len = S.length();
 		char left = ' ';
