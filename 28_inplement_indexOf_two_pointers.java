@@ -17,7 +17,7 @@ class Solution {
                 ++ pn;
                 ++ curLength;
             }
-            
+             
             if (curLength == ln) {
                 return ph - ln;
             }
