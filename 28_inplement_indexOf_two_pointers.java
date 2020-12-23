@@ -9,7 +9,7 @@ class Solution {
             // find the first position of ph
             while (ph < lh - ln + 1 && haystack.charAt(ph) != needle.charAt(0)) {
                 ++ ph;
-            }
+            } 
 
             int curLength = 0, pn = 0;
             while (ph < lh && pn < ln && haystack.charAt(ph) == needle.charAt(pn)) {
