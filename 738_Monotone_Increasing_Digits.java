@@ -12,4 +12,4 @@ class Solution {
         
         return Integer.parseInt(String.valueOf(S));
     }
-}
+} 
