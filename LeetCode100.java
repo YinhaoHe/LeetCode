@@ -7,6 +7,8 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+
+
 class Solution {
     public boolean isSameTree(TreeNode p, TreeNode q) {
         // DO NOT FORGET THE EDGE CASE
