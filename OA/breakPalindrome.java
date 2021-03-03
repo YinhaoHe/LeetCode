@@ -1,5 +1,6 @@
 import java.util.Scanner;
-class Solution {
+
+class BreakPalindrome {
     public static String breakPalindrome(String s) {
         char[] chars = s.toCharArray();
         int n = s.length();
@@ -14,6 +15,7 @@ class Solution {
         chars[n - 1] = 'b';
         return String.valueOf(chars);
     }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String s = scanner.nextLine();

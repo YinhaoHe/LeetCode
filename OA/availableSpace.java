@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-class Solution {
+class AvailableSpace {
     public static int availableSpace(List<Integer> freeSpace, int blockLength) {
         int res = Integer.MIN_VALUE;
         // strictly monotone increasing of (index, space)

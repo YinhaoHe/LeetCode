@@ -5,8 +5,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.stream.Collectors;
-class Solution {
-    public static int fillTheTruck(int num, List<Integer> boxes, int unitSize, List<Integer> unitsPerBox, int truckSize) {
+
+class FillTheTruck {
+    public static int fillTheTruck(int num, List<Integer> boxes, int unitSize, List<Integer> unitsPerBox,
+            int truckSize) {
         int ans = 0;
         int boxesLeft = truckSize;
         ArrayList<Map.Entry<Integer, Integer>> unitsBoxes = new ArrayList<>();
@@ -23,12 +25,15 @@ class Solution {
         }
         return ans;
     }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int num = Integer.parseInt(scanner.nextLine());
-        List<Integer> boxes = Arrays.stream(scanner.nextLine().split(" ")).map(Integer::parseInt).collect(Collectors.toList());
+        List<Integer> boxes = Arrays.stream(scanner.nextLine().split(" ")).map(Integer::parseInt)
+                .collect(Collectors.toList());
         int unitSize = Integer.parseInt(scanner.nextLine());
-        List<Integer> unitsPerBox = Arrays.stream(scanner.nextLine().split(" ")).map(Integer::parseInt).collect(Collectors.toList());
+        List<Integer> unitsPerBox = Arrays.stream(scanner.nextLine().split(" ")).map(Integer::parseInt)
+                .collect(Collectors.toList());
         int truckSize = Integer.parseInt(scanner.nextLine());
         scanner.close();
         int res = fillTheTruck(num, boxes, unitSize, unitsPerBox, truckSize);

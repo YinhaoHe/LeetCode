@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Collections;
 
-class Solution {
+class DebtRecords {
     public static List<String> debtRecords(List<List<String>> debts) {
         HashMap<String, Integer> bals = new HashMap<>();
         for (List<String> debt : debts) {
