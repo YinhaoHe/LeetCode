@@ -1,9 +1,9 @@
 import java.util.*;
 import java.io.*;
-import java.lang.*;
+// import java.lang.*;
 
 
-OPT: 
+// OPT: 
 
 public int cutOffRank(int cutOffRank, int num, int[] scores) {
     if(cutOffRank == 0) return 0;
@@ -22,39 +22,39 @@ public int cutOffRank(int cutOffRank, int num, int[] scores) {
 }
 
 
-class Solution {
-    public int cutOffRank(int cutOffRank, int num, int[] scores) {
+// class Solution {
+//     public int cutOffRank(int cutOffRank, int num, int[] scores) {
         
-        Arrays.sort(scores);
-        int[] rank = new int[num];
-        int countPlayer = 0;
+//         Arrays.sort(scores);
+//         int[] rank = new int[num];
+//         int countPlayer = 0;
         
-        rank[num - 1] = 1;
-        int sameScoreCount = 1;
+//         rank[num - 1] = 1;
+//         int sameScoreCount = 1;
         
-        for (int i = num - 1; i > 0; -- i) {
-            if (scores[i - 1] == scores[i]){
-                rank[i - 1] = rank[i];
-                sameScoreCount ++;
-            } else {
-                rank[i - 1] = rank[i] + sameScoreCount;
-                sameScoreCount = 1;
-            }
-        }
+//         for (int i = num - 1; i > 0; -- i) {
+//             if (scores[i - 1] == scores[i]){
+//                 rank[i - 1] = rank[i];
+//                 sameScoreCount ++;
+//             } else {
+//                 rank[i - 1] = rank[i] + sameScoreCount;
+//                 sameScoreCount = 1;
+//             }
+//         }
         
-        for (int r : rank) {
-            // System.out.println(r);
-            if (r <= cutOffRank) {
-                countPlayer++;
-            }
-        }
-        return countPlayer;
-    }
+//         for (int r : rank) {
+//             // System.out.println(r);
+//             if (r <= cutOffRank) {
+//                 countPlayer++;
+//             }
+//         }
+//         return countPlayer;
+//     }
 
-    public static void main(String args[]) {
-        Solution sol = new Solution();
-        int[] scores = {100, 50, 50, 25};
-        int ans = sol.cutOffRank(3, 4, scores);
-        System.out.println(ans);
-    }
-}
+//     public static void main(String args[]) {
+//         Solution sol = new Solution();
+//         int[] scores = {100, 50, 50, 25};
+//         int ans = sol.cutOffRank(3, 4, scores);
+//         System.out.println(ans);
+//     }
+// }
