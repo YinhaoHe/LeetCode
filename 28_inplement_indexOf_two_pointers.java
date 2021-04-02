@@ -4,7 +4,7 @@
         if (ln == 0) return 0;
          
         int ph = 0; 
-         
+        
         while (ph < lh - ln + 1) {
             // find the first position of ph
             while (ph < lh - ln + 1 && haystack.charAt(ph) != needle.charAt(0)) {
