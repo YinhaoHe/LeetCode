@@ -14,5 +14,5 @@
 
 ## Basic Coding
 
-- 59 Spiral Matrix II : ([detail](https://mp.weixin.qq.com/s/KTPhaeqxbMK9CxHUUgFDmg))([LC](https://leetcode.com/problems/spiral-matrix-ii/))
+- 59 Spiral Matrix II : 注意找到特定的循环规律 ([detail](https://mp.weixin.qq.com/s/KTPhaeqxbMK9CxHUUgFDmg)) ([LC](https://leetcode.com/problems/spiral-matrix-ii/))
 
