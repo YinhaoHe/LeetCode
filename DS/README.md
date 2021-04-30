@@ -19,4 +19,6 @@
 ## LinkedList Operation
 
 - [203 Remove LinkedList Elements](./LinkedList/203_remove_LinkedList_elements.java): 使用dummy head保持链表操作的一致性，避免单独处理head指针 ([detail](https://mp.weixin.qq.com/s/slM1CH5Ew9XzK93YOQYSjA)) ([LC](https://leetcode.com/problems/remove-linked-list-elements/))
+- 
+- [206 Reverse Linked List](./LinkedList/206_reverse_LinkedList.java): 使用一个pre 一个cur 依次修改next的方向 最后返回pre ([detail](https://mp.weixin.qq.com/s/pnvVP-0ZM7epB8y3w_Njwg)) ([LC](https://leetcode.com/problems/reverse-linked-list/))
 
