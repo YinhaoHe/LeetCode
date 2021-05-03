@@ -9,7 +9,7 @@ class Solution {
         while (cur != null) {
             tmp = cur.next;
             cur.next = pre;
-            // Update pre and cur
+            // Update pre and cur 
             pre = cur;
             cur = tmp;
         }
