@@ -22,3 +22,7 @@
 - 
 - [206 Reverse Linked List](./LinkedList/206_reverse_LinkedList.java): 使用一个pre 一个cur 依次修改next的方向 最后返回pre ([detail](https://mp.weixin.qq.com/s/pnvVP-0ZM7epB8y3w_Njwg)) ([LC](https://leetcode.com/problems/reverse-linked-list/))
 
+## HashMap
+
+- [242 Valid Anagram](./HashMap/242_valid_anagram.java): 使用字母-'a' 在26位数组中存储每个字母出现次数 好过哈希表 ([detail](https://mp.weixin.qq.com/s/vM6OszkM6L1Mx2Ralm9Dig)) ([LC](https://leetcode.com/problems/valid-anagram/))
+
