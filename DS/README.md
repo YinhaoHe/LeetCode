@@ -19,7 +19,7 @@
 ## LinkedList Operation
 
 - [203 Remove LinkedList Elements](./LinkedList/203_remove_LinkedList_elements.java): 使用dummy head保持链表操作的一致性，避免单独处理head指针 ([detail](https://mp.weixin.qq.com/s/slM1CH5Ew9XzK93YOQYSjA)) ([LC](https://leetcode.com/problems/remove-linked-list-elements/))
-- 
+- [707 Design LinkedList](./LinkedList/707_design_LinkedList.java): 可以使用dummy head也可以不使用 基础操作 可以画图弄清next关系 ([detail](https://mp.weixin.qq.com/s/Cf95Lc6brKL4g2j8YyF3Mg)) ([LC](https://leetcode.com/problems/design-linked-list/))
 - [206 Reverse Linked List](./LinkedList/206_reverse_LinkedList.java): 使用一个pre 一个cur 依次修改next的方向 最后返回pre ([detail](https://mp.weixin.qq.com/s/pnvVP-0ZM7epB8y3w_Njwg)) ([LC](https://leetcode.com/problems/reverse-linked-list/))
 
 ## HashMap
