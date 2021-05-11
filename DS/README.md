@@ -30,3 +30,5 @@
 - [349 Intersection of Two Arrays](./HashMap/349_intersection_of_two_arrays.java): 两个set去重, 动态数组存结果, list转array不要用toArray() ([detail](https://mp.weixin.qq.com/s/N9iqAchXreSVW7zXUS4BVA)) ([LC](https://leetcode.com/problems/intersection-of-two-arrays/))
 - [202 Happy Number](./HashMap/202_happy_number.java): 用一个set记录是否有重复 ([detail](https://mp.weixin.qq.com/s/G4Q2Zfpfe706gLK7HpZHpA)) ([LC](https://leetcode.com/problems/happy-number/))
 
+- [1 Two Sum](./HashMap/1_two_sum.java): 用HashMap存储值为key index 为 value ([detail](https://mp.weixin.qq.com/s/uVAtjOHSeqymV8FeQbliJQ)) ([LC](https://leetcode.com/problems/two-sum/))
+
