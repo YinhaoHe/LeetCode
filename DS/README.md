@@ -21,7 +21,8 @@
 - [203 Remove LinkedList Elements](./LinkedList/203_remove_LinkedList_elements.java): 使用dummy head保持链表操作的一致性，避免单独处理head指针 ([detail](https://mp.weixin.qq.com/s/slM1CH5Ew9XzK93YOQYSjA)) ([LC](https://leetcode.com/problems/remove-linked-list-elements/))
 - [707 Design LinkedList](./LinkedList/707_design_LinkedList.java): 可以使用dummy head也可以不使用 基础操作 可以画图弄清next关系 ([detail](https://mp.weixin.qq.com/s/Cf95Lc6brKL4g2j8YyF3Mg)) ([LC](https://leetcode.com/problems/design-linked-list/))
 - [206 Reverse Linked List](./LinkedList/206_reverse_LinkedList.java): 使用一个pre 一个cur 依次修改next的方向 最后返回pre ([detail](https://mp.weixin.qq.com/s/pnvVP-0ZM7epB8y3w_Njwg)) ([LC](https://leetcode.com/problems/reverse-linked-list/))
-- [141 LinkedList Cycle](./LinkedList/141_linkedlist_cycle.java): 使用一个慢指针/一个快指针, 慢的一次走一步, 快的一次两步, 如果能相遇说明一定有环 ([LC](https://leetcode.com/problems/linked-list-cycle/)) 
+- [141 LinkedList Cycle](./LinkedList/141_linkedlist_cycle.java): 使用一个慢指针/一个快指针, 慢的一次走一步, 快的一次两步, 如果能相遇说明一定有环 ([detail](https://www.cnblogs.com/grandyang/p/4137187.html)) ([LC](https://leetcode.com/problems/linked-list-cycle/)) 
+- [142 LinkedList Cycle 2](./LinkedList/142_LinkedList_cycle_2.java): 先使用一个慢指针/一个快指针 从头寻找判断是否有环 如果有环再定义两个指针 一个从头节点开始 另一个从相遇节点开始 每个指针一次走一步 直到相遇则为环的入口节点 ([detail](https://mp.weixin.qq.com/s/_QVP3IkRZWx9zIpQRgajzA)) ([LC](https://leetcode.com/problems/linked-list-cycle-ii/))
 
 ## HashMap
 
