@@ -31,4 +31,5 @@
 - [202 Happy Number](./HashMap/202_happy_number.java): 用一个set记录是否有重复 ([detail](https://mp.weixin.qq.com/s/G4Q2Zfpfe706gLK7HpZHpA)) ([LC](https://leetcode.com/problems/happy-number/))
 - [1 Two Sum](./HashMap/1_two_sum.java): 用HashMap存储值为key index 为 value ([detail](https://mp.weixin.qq.com/s/uVAtjOHSeqymV8FeQbliJQ)) ([LC](https://leetcode.com/problems/two-sum/))
 - [454 4 Sum 2](./HashMap/454_4Sum_2.java): 使用HashMap 遍历前两个数组 存储下来两数之和的出现次数 再次遍历后两个数组 用0 - 后两个数组中两数之和 判断在map中是否存在 如果存在则累加起出现的次数就是答案 ([detail](https://mp.weixin.qq.com/s/Ue8pKKU5hw_m-jPgwlHcbA)) ([LC](https://leetcode.com/problems/4sum-ii/submissions/))
+- [383 Ransom Note](./HashMap/383_ransom_note.java): 使用26位数组存储每个字母出现次数 mag中加一 note中减一 判断有没有小于零 注意要写`--arr[c]` not `arr[c]--`  ([detail](https://mp.weixin.qq.com/s/sYZIR4dFBrw_lr3eJJnteQ)) ([LC](https://leetcode.com/problems/ransom-note/))
 
