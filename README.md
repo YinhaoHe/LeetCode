@@ -74,6 +74,11 @@ String str2 = ArrayUtils.toString(arr, ","); // 数组转字符串(逗号分隔,
 System.out.println(str2); // {0,1,2,3,4,5}
 ```
 
+## Integer parseInt vs valueOf
+
+- 当我们需要的是一个基本类型** int **的时候我们需要使用`Integer.parseInt()`函数
+- 当我们需要的是一个**Integer**对象类的时候我们就是用`Integer.valueOf()`函数
+
 ## Lambda expression
 
 (a, b) -> a - b 
