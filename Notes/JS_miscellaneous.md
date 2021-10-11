@@ -11,3 +11,9 @@ let 变量，块作用域，不能重复声明覆盖
 var 变量，函数作用域，能重复声明覆盖
 
 如果定义一个变量后不会修改对应变量 使用const
+
+ES6 `reduce()` method.
+
+Default parameters.
+
+Destructure object
