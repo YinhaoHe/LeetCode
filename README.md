@@ -25,6 +25,29 @@ words = Str.split("[^\\p{L}0-9']+");
 
 ```
 
+### indexOf
+
+```java
+public int indexOf(String str)
+public int indexOf(String str, int fromIndex)
+public int indexOf(int char)
+public int indexOf(int char, int fromIndex)
+```
+
+#### Parameter Values
+
+| Parameter   | Description                                                  |
+| :---------- | :----------------------------------------------------------- |
+| *str*       | A `String` value, representing the string to search for      |
+| *fromIndex* | An `int` value, representing the index position to start the search from |
+| *char*      | An `int` value, representing a single character, e.g 'A', or a Unicode value |
+
+#### Technical Details
+
+| Returns: | An `int` value, representing the index of the first occurrence of the character in the string, or -1 if it never occurs |
+| :------- | ------------------------------------------------------------ |
+|          |                                                              |
+
 ### Java 数组转字符串 字符串转数组
 
 #### 字符串转数组
