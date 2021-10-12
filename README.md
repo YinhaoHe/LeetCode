@@ -29,7 +29,7 @@ words = Str.split("[^\\p{L}0-9']+");
 
 ```java
 public int indexOf(String str)
-public int indexOf(String str, int fromIndex)
+public int indexOf(String str, int fromIndex) // 从index开始第一次出现的位置
 public int indexOf(int char)
 public int indexOf(int char, int fromIndex)
 ```
