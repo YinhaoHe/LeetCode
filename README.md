@@ -446,6 +446,38 @@ List<String> messages = Arrays.asList("Hello", "World!", "How", "Are", "You");
 
 ## Collection:
 
+### [toArray](https://www.baeldung.com/java-collection-toarray-methods)
+
+#### Collection.toArray()
+
+The *toArray()* method allocates a new in-memory array with a length equal to the size of the collection. **Internally,** **it invokes the \*[Arrays.copyOf](https://www.baeldung.com/java-array-copy)\* on the underlying array backing the collection**. Therefore, the returned array has no references to it and is safe to use:
+
+```java
+Object[] naturalNumbersArray = naturalNumbers.toArray();
+```
+
+However, we cannot merely cast the result into an *Integer[].* Doing so will result in a [*ClassCastException*](https://www.baeldung.com/java-classcastexception).
+
+#### Collection.toArray(T[] a)
+
+Unlike the non-parameterized method, this one accepts a pre-allocated array as an argument. Additionally, the use of [Generics](https://www.baeldung.com/java-generics) in the method's definition mandates having the same type for the input and the returned array. This also solves the previously observed problem of iterating over an *Object[]*.
+
+This variant works distinctively based on the size of the input array:
+
+- If the length of the pre-allocated array is less than the collection's size, a new array of the required length and the same type is allocated: 
+- `new Integer[0]`预定长度不够会重新分配
+
+```java
+Integer[] naturalNumbersArray = naturalNumbers.toArray(new Integer[0]);
+```
+
+- If the input array is large enough to contain the collection's elements, it's returned with those elements inside:
+- `new Integer[naturalNumbers.size]`长度够则正好放进去
+
+```java
+Integer[] naturalNumbersArray = naturalNumbers.toArray(new Integer[naturalNumbers.size]);
+```
+
 ```java
 Collections.reverse(arraylist);
 Collections.binarySearch(list,key);
